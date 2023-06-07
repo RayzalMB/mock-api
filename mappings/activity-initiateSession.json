@@ -1,0 +1,39 @@
+{
+	"request": {
+		"method": "POST",
+		"urlPath": "/mock/session/initiate",
+		"bodyPatterns": [{
+				"matchesJsonPath": "$.applicationInfo[?(@.srcApplicationId =~ /.*/i)]"
+			}
+		]
+	},
+	"response": {
+		"status": 201,
+		"headers": {
+			"Content-Type": "application/json",
+			"Access-Control-Allow-Origin": "*"
+		},
+		"transformers": [
+			"response-template"
+		],
+		"jsonBody": {
+			"responseHeader": {
+				"srcApplicationId": "ATTOM",
+				"inputChannelId": "ATTOM_OPUS",
+				"srcSystemTranId": "1537167752579",
+				"responseStatus": "Success",
+				"statusDescription": "Order Data successfully inserted",
+				"opusUrl": "https://opus-qc9.web.att.com/opus/findhome.do?dispatch=ctlliclaunchprocess"
+			},
+			"responseDetail": {
+				"applicationId": "CENTURYLINK",
+				"agentId": "MSX0001",
+				"authenticationToken": "LKQ9+QSasULjpUjGOOBohnmPBC3m0GYh0zT6JLB8oEqakafSFbjQ8C9K7htmnzPy5hJW7yNHs0C/geqmwBKe6fqMJH7F3mTWc/JLef6SXh/z2CCoUZOZncQp9cdPVwWxzHjtqaY/rhZEUxGMcYPMfVkoBwW8w3VBVTgZ7FQERbwdilYRV/SRStSgLwmg18JNVIa6ivn/GX3MaoYi2usuAm/y2ulerry5c6CdFRvyxBPq+5asL2yACK73GFoFCWdxzRVd6aIkz9d1mEfnfbZ/A69u/h+1pRfon5Lqosw3m9bM8yfeHNfIICMIvOMYLWX18eubKxzmSbN5bUO9T21Sbg==",
+				"uniqueSessionId": "YsvETv1BFZjZ4gWD",
+				"trackingIdent": "CENTURYLINK-v04122-708607-09172018-0704-24-718",
+				"dateOfBirth": "lA+ibTGNWNM+MCWU7vc6xK48dXdgG1aXjnGf07ZIHi5ccsbP4RZ9Bcg6XRPopX3YYjMsY3Kb17NhAizvb9HR6xPbQxbS3l9VTkwl93ufoDd8Cd/aQBgB7BIp/2zK1fh2wOfn6TRJyNvpgCUWlOr6FchHQke8Tf0lFu5zPhINDm000Zbti9kR6C3pwnGxBsGtjRHsINPIDWDUAoMYV09xs/Atf+hhB+d90Bkt4npDtY5ylmsU/+dQcOYk3RTPZ1dQCeem7qBRulLo2SnB4Z88LkihHmWIeNkrRYpoYjvoSMVDieW5yFc4GO+ERmkRdQsqtEYsiyeCWT/15bwo9OnvSA=="
+			}
+		}
+	}
+}
+}

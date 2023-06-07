@@ -1,0 +1,7 @@
+set JAVA_HOME=C:\Harman\java\jdk-17.0.2
+set PATH=%JAVA_HOME%\bin;%PATH%
+
+set PORT=9000
+set ROOT_DIR=C:\Harman\Projects\mock-api
+
+java -jar wiremock-standalone-2.12.0.jar --port %PORT% --root-dir %ROOT_DIR% --global-response-templating --local-response-templating --print-all-network-traffic --verbose --enable-stub-cors

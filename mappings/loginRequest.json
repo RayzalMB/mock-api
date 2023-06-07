@@ -1,0 +1,14 @@
+{
+    "request": {
+        "method": "POST",
+		"urlPattern": "/Login?.*"
+    },
+    "response": {
+        "status": 200,
+		"headers":
+		{
+			"Content-Type" : "application/json"
+		},
+        "bodyFileName": "loginResponse.json"
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "request": {
+        "method": "POST",
+		"urlPattern": "/Logout?.*",
+		"bodyPatterns" : [ {
+			"equalToJson" : {"productId" : [93,101],"sourceProductId":"107","orderType" :"CHG_SUBS_OFFER_PRI"}
+			} 
+		]
+		
+    },
+    "response": {
+        "status": 200,
+		"headers":
+		{
+			"Content-Type" : "application/json"
+		},
+        "bodyFileName": "logoutResponse.json"
+    }
+}
